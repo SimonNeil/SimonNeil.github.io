@@ -2,62 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Responsive Design Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <!-- Link to the main CSS file -->
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    <!-- Site Header -->
-    <header class="site-header">
-        <div class="wrapper">
-            <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-            <!-- Navigation Menu -->
-            <nav class="site-nav">
-                {% if site.pages %}
-                <ul>
-                    {% for page in site.pages %}
-                    {% if page.title and page.nav %}
-                    <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </nav>
-        </div>
+    <header>
+        <h1>{{ page.title }}</h1>
     </header>
-
-    <!-- Main Content -->
-    <main class="wrapper">
+    <main>
         {{ content }}
     </main>
-
-    <!-- Site Footer -->
-    <footer class="site-footer">
-        <div class="wrapper footer-content">
-            <div class="footer-col">
-                <p>© {{ site.time | date: '%Y' }} {{ site.title }}</p>
-            </div>
-            <!-- Additional Footer Columns -->
-            <div class="footer-col">
-                <h2 class="footer-heading">Follow Me</h2>
-                <ul class="social-media-list">
-                    <li><a href="https://x.com/yourusername">X (Twitter)</a></li>
-                    <li><a href="https://lesswrong.com/user/yourusername">LessWrong</a></li>
-                    <!-- Add more social media links as needed -->
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h2 class="footer-heading">Contact</h2>
-                <ul class="contact-list">
-                    <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-                    <!-- Add more contact methods if needed -->
-                </ul>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 Effective Dispersal Blog</p>
     </footer>
 </body>
 </html>
