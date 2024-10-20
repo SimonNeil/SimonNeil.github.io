@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Mind Uploading: A Technological Mirage of Immortality"
 date: 2024-10-16
 categories: philosophy technology
